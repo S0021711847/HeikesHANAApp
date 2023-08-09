@@ -1,5 +1,30 @@
 {
-  "scopes": [],
+  "xsappname": "heikeshanaapp",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.HeikesHANAAppAdmin",
+      "description": "HeikesHANAAppAdmin"
+    }
+  ],
   "attributes": [],
-  "role-templates": []
+  "role-templates": [
+    {
+      "name": "HeikesHANAAppAdmin",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.HeikesHANAAppAdmin"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "oauth2-configuration": {
+    "credential-types": [
+        "binding-secret",
+        "x509"
+    ],
+    "redirect-uris": [
+        "https://*.applicationstudio.cloud.sap/**"
+    ]
+}
 }
